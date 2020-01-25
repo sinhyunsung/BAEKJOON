@@ -1,19 +1,13 @@
 a=int(input())
 b=[]
+dp=[]
 
 for i in range(a):
-    b.append([int(input()),0,0,0])
+    b.append(int(input()))
+    dp.append(0)
+dp[0],dp[1],dp[2]=b[0],b[1],b[2]
 
-for i in range(a):
-    if i==0:
-        b[i][1],b[i][2],b[i][3]=b[i][0],0,0
-    elif i==1:
-        b[i][1]=b[i][0]
-        b[i][2]=b[i-1][1]+b[i][0]
-        b[i][3]=0
-    else:
-        b[i][1]=max(b[i-2][1]+b[i][0],b[i-2][2]+b[i][0])
-        b[i][2]=b[i-1][1]+b[i][0]
-        b[i][3]=max(b[i-1][1],b[i-1][2])
+for i in range(3,a):
+    dp[i] = max(dp[i-2] + b[i], dp[i-3] + b[i] + b[i-1])
 
-print(max(b[a-1][1],b[a-1][2]))
+print(dp)
