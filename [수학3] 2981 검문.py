@@ -29,7 +29,7 @@ else:
     gcd=b
 
 x=[]
-for i in range(2,int(math.sqrt(gcd[0]))+2):
+for i in range(2,int(math.sqrt(gcd[0]))+1):
     if gcd[0]%i==0:
         print(i,end=' ')
         x.append(i)
@@ -37,3 +37,5 @@ x.sort(reverse=True)
 for i in x:
     if gcd[0]//i not in x:
         print(gcd[0]//i,end=' ') 
+
+print(gcd[0])
