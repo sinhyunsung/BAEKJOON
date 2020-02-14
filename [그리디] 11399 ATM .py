@@ -6,4 +6,5 @@ for i in range(a):
     for j in range(0,i+1):
         sumv+=b[j]
         
+
 print(sumv)
