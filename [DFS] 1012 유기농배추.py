@@ -3,11 +3,6 @@ from collections import deque
 
 def cycle(dq,li,x,y):
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 8384a213838eebe514f787f5185bf3a878f3be23
     while True:
         if len(dq)==0:
             break
