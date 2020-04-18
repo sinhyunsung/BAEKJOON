@@ -5,6 +5,7 @@ from collections import deque
 def cycle(dq,li,x,y):
 
 
+
     while True:
         if len(dq)==0:
             break
